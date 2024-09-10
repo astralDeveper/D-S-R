@@ -39,4 +39,4 @@ const IntroBanner = () => {
   );
 };
 
-export default IntroBanner;
+export default IntroBanner

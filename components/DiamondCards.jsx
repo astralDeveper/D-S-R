@@ -5,7 +5,7 @@ import server from '../public/server.png'
 const DiamondCards = () => {
   return (
    <>
-   <section className="max-w-screen-2xl px-24">
+   <section className="max-w-screen-2xl px-10 max-md:px-4  mx-auto">
       <div className="container px-5 py-24 mx-auto">
     
         <div className="flex flex-wrap -m-2">
@@ -65,21 +65,7 @@ const teamMembers = [
       discription: "Never search for contact information online again. Our database is updated weekly and offers the most accurate contact information available on any recruiting website. You can download or save our list, ensuring you always have access to the contacts you need.",
       image: "https://dummyimage.com/98x98",
     },
-    {
-      name: "Atticus Finch",
-      discription: "Never search for contact information online again. Our database is updated weekly and offers the most accurate contact information available on any recruiting website. You can download or save our list, ensuring you always have access to the contacts you need.",
-      image: "https://dummyimage.com/100x90",
-    },
-    {
-      name: "Alper Kamu",
-      discription: "Never search for contact information online again. Our database is updated weekly and offers the most accurate contact information available on any recruiting website. You can download or save our list, ensuring you always have access to the contacts you need.",
-      image: "https://dummyimage.com/104x94",
-    },
-    {
-      name: "Rodrigo Monchi",
-      discription: "Never search for contact information online again. Our database is updated weekly and offers the most accurate contact information available on any recruiting website. You can download or save our list, ensuring you always have access to the contacts you need.",
-      image: "https://dummyimage.com/108x98",
-    },
+   
   ];
 
 export default DiamondCards
