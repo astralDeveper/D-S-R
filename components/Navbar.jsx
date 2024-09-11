@@ -31,7 +31,9 @@ const Navbar = () => {
 
 
 
-        <nav className='p-4 flex items-center justify-between max-w-screen-2xl mx-auto px-10 max-sm:px-4'>
+        <nav className='shadow-[0_11px_6.5px_rgba(0,0,0,0.25)]'>
+            <div className='p-4 flex items-center justify-between max-w-screen-2xl mx-auto px-10 max-sm:px-4 '>
+
 
             <div className='flex items-center gap-6'>
                 <button className='hidden max-lg:block' onClick={toggleMobileNav}>
@@ -51,6 +53,7 @@ const Navbar = () => {
 
             <Link href={'/login'} className='bg-[#012555] hover:bg-[#012555ad] transition-all text-white p-2 px-6 text-2xl font-medium rounded-lg max-xl:text-lg max-sm:text-sm max-sm:font-medium'>Login</Link>
 
+            </div>
         </nav>
 
 

@@ -4,127 +4,127 @@ const Footer = () => {
   return (
     <>
       <div className="bg-[#022138]">
-        <footer class="text-gray-300 lg:py-24 sm:py-14 py-5 max-w-screen-2xl mx-auto max-2xl:px-24 max-md:px-14 max-sm:px-5">
-          <div class=" flex md:items-start lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-            <div class="flex-grow flex justify-between  flex-wrap  -mb-10 md:mt-0 mt-10 md:text-left    ">
-              <div class="">
-                <h2 class="font-medium text-gray-100 tracking-widest text-[2rem] mb-3">
+        <footer className="text-gray-300 lg:py-24 sm:py-14 py-5 max-w-screen-2xl mx-auto max-2xl:px-24 max-md:px-14 max-sm:px-5">
+          <div className=" flex md:items-start lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+            <div className="flex-grow flex justify-between  flex-wrap  -mb-10 md:mt-0 mt-10 md:text-left    ">
+              <div className="">
+                <h2 className="font-medium text-gray-100 tracking-widest text-[2rem] mb-3">
                   Resources
                 </h2>
-                <nav class="list-none mb-10 space-y-3">
+                <nav className="list-none mb-10 space-y-3">
                   <li>
-                    <a class="text-gray-300 ">Pricing</a>
+                    <a className="text-gray-300 ">Pricing</a>
                   </li>
                   <li>
-                    <a class="text-gray-300 ">
+                    <a className="text-gray-300 ">
                       Free Recruiting Tips
                     </a>
                   </li>
                   <li>
-                    <a class="text-gray-300 ">
+                    <a className="text-gray-300 ">
                       Why Diamond Sports Recruiting
                     </a>
                   </li>
                   <li>
-                    <a class="text-gray-300 ">FAQ</a>
+                    <a className="text-gray-300 ">FAQ</a>
                   </li>
                 </nav>
               </div>
-              <div class="">
-                <h2 class="font-medium text-gray-100 tracking-widest text-[2rem] mb-3">
+              <div className="">
+                <h2 className="font-medium text-gray-100 tracking-widest text-[2rem] mb-3">
                   Company & Support
                 </h2>
-                <nav class="list-none mb-10 space-y-3">
+                <nav className="list-none mb-10 space-y-3">
                   <li>
-                    <a class="text-gray-300 ">Pricing</a>
+                    <a className="text-gray-300 ">Pricing</a>
                   </li>
                   <li>
-                    <a class="text-gray-300 ">
+                    <a className="text-gray-300 ">
                       Free Recruiting Tips
                     </a>
                   </li>
                   <li>
-                    <a class="text-gray-300 ">
+                    <a className="text-gray-300 ">
                       Why Diamond Sports Recruiting
                     </a>
                   </li>
                   <li>
-                    <a class="text-gray-300 ">FAQ</a>
+                    <a className="text-gray-300 ">FAQ</a>
                   </li>
                 </nav>
               </div>
-              <div class="">
-                <h2 class="font-medium text-gray-100 tracking-widest text-[2rem] mb-3">
+              <div className="">
+                <h2 className="font-medium text-gray-100 tracking-widest text-[2rem] mb-3">
                   Legal
                 </h2>
-                <nav class="list-none mb-10 space-y-3">
+                <nav className="list-none mb-10 space-y-3">
                   <li>
-                    <a class="text-gray-300 ">Pricing</a>
+                    <a className="text-gray-300 ">Pricing</a>
                   </li>
                   <li>
-                    <a class="text-gray-300 ">
+                    <a className="text-gray-300 ">
                       Free Recruiting Tips
                     </a>
                   </li>
                   <li>
-                    <a class="text-gray-300 ">
+                    <a className="text-gray-300 ">
                       Why Diamond Sports Recruiting
                     </a>
                   </li>
                   <li>
-                    <a class="text-gray-300 ">FAQ</a>
+                    <a className="text-gray-300 ">FAQ</a>
                   </li>
                 </nav>
               </div>
             </div>
           </div>
 
-          <div class="bg-[#022138]">
-            <div class="container mx-auto pt-14 flex flex-wrap flex-col sm:flex-row">
-              <p class="text-gray-100 text-sm text-center sm:text-left">
+          <div className="bg-[#022138]">
+            <div className="container mx-auto pt-14 flex flex-wrap flex-col sm:flex-row">
+              <p className="text-gray-100 text-sm text-center sm:text-left">
                 © 2024 DSR —
                 <a
                   href="https://twitter.com/knyttneve"
                   rel="noopener noreferrer"
-                  class="text-gray-300 ml-1"
+                  className="text-gray-300 ml-1"
                   target="_blank"
                 >
                   @knyttneve
                 </a>
               </p>
-              <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start gap-5">
-                <a class="text-[#012555] bg-white p-3 rounded-full">
+              <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start gap-5">
+                <a className="text-[#012555] bg-white p-3 rounded-full">
                   <svg
                     fill="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    class="w-5 h-5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    className="w-5 h-5"
                     viewBox="0 0 24 24"
                   >
                     <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
                   </svg>
                 </a>
-                <a class="text-[#012555] bg-white p-3 rounded-full">
+                <a className="text-[#012555] bg-white p-3 rounded-full">
                   <svg
                     fill="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    class="w-5 h-5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    className="w-5 h-5"
                     viewBox="0 0 24 24"
                   >
                     <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
                   </svg>
                 </a>
-                <a class="text-[#012555] bg-white p-3 rounded-full">
+                <a className="text-[#012555] bg-white p-3 rounded-full">
                   <svg
                     fill="none"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    class="w-5 h-5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    className="w-5 h-5"
                     viewBox="0 0 24 24"
                   >
                     <rect
@@ -138,14 +138,14 @@ const Footer = () => {
                     <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
                   </svg>
                 </a>
-                <a class="text-[#012555] bg-white p-3 rounded-full">
+                <a className="text-[#012555] bg-white p-3 rounded-full">
                   <svg
                     fill="currentColor"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="0"
-                    class="w-5 h-5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="0"
+                    className="w-5 h-5"
                     viewBox="0 0 24 24"
                   >
                     <path
