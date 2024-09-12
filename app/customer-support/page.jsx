@@ -26,10 +26,10 @@ const page = () => {
           </div>
           <div className='flex flex-col w-full gap-2 max-md:col-span-2'>
             <label className='font-semibold max-sm:text-sm' htmlFor="inquiry">Inquiry Type:*</label>
-            <select name="" id="inquiry" className='border-2 border-[#DADADA] p-3 px-4 rounded-xl outline-none max-sm:p-2 max-sm:px-3 cursor-pointer'>
-              <option disabled value="">Select</option>
-              <option value="">Test</option>
-              <option value="">Test1</option>
+            <select defaultValue='test' name="" id="inquiry" className='border-2 border-[#DADADA] bg-white p-3 px-4 rounded-xl outline-none max-sm:p-2 max-sm:px-3 cursor-pointer'>
+              <option value="">Select</option>
+              <option value="test">Test</option>
+              <option value="test1">Test1</option>
             </select>
           </div>
           <div className='flex flex-col w-full gap-2 max-md:col-span-2'>

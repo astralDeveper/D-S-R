@@ -76,8 +76,8 @@ export default function Home() {
 
     {/* section 4 */}
 
-    <div className="bg-[#012555] flex items-center justify-center mt-10 p-14 gap-14">
-      <h2 className="text-2xl font-semibold text-white w-[30%]">Are you ready to join Diamond Sports Recruiting?</h2>
+    <div className="bg-[#012555] flex items-center justify-center mt-10 p-14 max-sm:p-8 max-sm:text-center gap-14 max-sm:flex-wrap">
+      <h2 className="text-2xl font-semibold text-white w-[30%] max-xl:w-[60%] max-sm:w-full">Are you ready to join Diamond Sports Recruiting?</h2>
       <button className='bg-white hover:bg-[#ffffffad] transition-all text-[#012555] p-2 px-6 text-2xl font-medium rounded-lg max-xl:text-lg max-sm:text-sm max-sm:font-medium'>Join Today</button>
     </div>
 
