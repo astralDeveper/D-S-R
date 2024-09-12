@@ -15,6 +15,8 @@ const Trusted = () => {
       className="object-cover object-center rounded max-sm:w-20 justify-self-center"
       alt="hero"
       src={trusted}
+      width={190}
+      height={190}
     />
   </div>
 </div>

@@ -19,9 +19,8 @@ const IntroBanner = () => {
               Your recruitment starts here......
             </p>
             <div className="flex justify-center">
-              <button className="inline-flex font-semibold text-[#012555] bg-white border-0 py-2 px-6 focus:outline-none rounded text-lg">
-                Join Today
-              </button>
+            <button className='bg-white hover:bg-[#ffffffad] transition-all text-[#012555] p-2 px-6 text-2xl font-medium rounded-lg max-xl:text-lg max-sm:text-sm max-sm:font-medium'>Join Today</button>
+
             </div>
           </div>
           <div className="xl:max-w-[40rem] lg:max-w-[30rem] md:max-w-[15rem] hidden lg:block">

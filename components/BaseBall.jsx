@@ -8,8 +8,8 @@ const BaseBall = () => {
         <h3 className='lg:text-[2.5rem] sm:text-[2rem] text-[1rem]'>We focus soley on</h3>
         <h1 className='lg:text-[3.5rem] sm:text-[2.5rem] text-[1.5rem] py-7 font-bold'>Baseball & Softball Athletes</h1>
         <div className='flex gap-5'>
-            <button className='border-white border-2 rounded-lg p-2 bg-white text-[#012555] font-semibold'>Get Recruited</button>
-            <button className='border-white border-2 rounded-lg p-2'>Join Today</button>
+        <button className='bg-white hover:bg-[#ffffffad] transition-all text-[#012555] p-2 px-6 text-2xl font-medium rounded-lg max-xl:text-lg max-sm:text-sm max-sm:font-medium'>Get Recruited</button>
+        <button className='bg-[#012555] border-2 border-white hover:bg-white hover:text-[#012555] transition-all text-white p-2 px-6 text-2xl font-medium rounded-lg max-xl:text-lg max-sm:text-sm max-sm:font-medium'>Join Today</button>
         </div>
         </div>
     </div>
