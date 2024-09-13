@@ -47,7 +47,7 @@ const Navbar = () => {
                     </Link>
                 </div>
 
-                <ul className='flex items-center gap-14 text-xl font-medium max-xl:gap-8 max-xl:text-lg max-lg:hidden'>
+                <ul className='flex items-center gap-14 text-xl font-medium max-2xl:gap-8 max-xl:text-[95%] max-lg:hidden'>
                     {/* Add active link highlighting */}
                     {router === '/' ? <Link href={'/'}><li className={`cursor-pointer hover:text-[#000000af] transition-all ${isActive('/')}`}>Home</li>  {router === '/' && <hr className='border-2 border-[#E51A1A]' />}</Link> : <Link href={'/diamond-sports'}><li className={`cursor-pointer hover:text-[#000000af] transition-all ${isActive('/diamond-sports')}`}>Why Diamond Sports Recruiting</li>  {router === '/diamond-sports' && <hr className='border-2 border-[#E51A1A] w-40' />}</Link>}
                     <Link href={'/free-recruiting'}><li className={`cursor-pointer hover:text-[#000000af]  transition-all ${isActive('/free-recruiting')}`}>Free Recruiting Tips</li> {router === '/free-recruiting' && <hr className='border-2 border-[#E51A1A] w-40' />}</Link> 
