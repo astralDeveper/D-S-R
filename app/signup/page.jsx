@@ -8,34 +8,35 @@ const page = () => {
 
 
 
-        <form className='grid grid-cols-2 mt-14 w-[1200px] max-xl:w-full max-md:mt-8 max-md:w-full mx-auto gap-10 max-sm:gap-6'>
+        <form onSubmit={handleSubmit} className='grid grid-cols-2 mt-14 w-[1200px] max-xl:w-full max-md:mt-8 max-md:w-full mx-auto gap-10 max-sm:gap-6'>
           <div className='flex flex-col w-full gap-2 max-md:col-span-2'>
             <label className='font-semibold max-sm:text-sm' htmlFor="first">Athlete's First Name:*</label>
-            <input id='first' className='border-2 border-[#DADADA] p-3 px-4 rounded-xl outline-none max-sm:p-2 max-sm:px-3' type="text" placeholder='John'/>
+            <input id='firstName' name='firstName' className='border-2 border-[#DADADA] p-3 px-4 rounded-xl outline-none max-sm:p-2 max-sm:px-3' type="text" placeholder='John'/>
           </div>
           <div className='flex flex-col w-full gap-2 max-md:col-span-2'>
             <label className='font-semibold max-sm:text-sm' htmlFor="last">Athlete's Last Name:*</label>
-            <input id='last' className='border-2 border-[#DADADA] p-3 px-4 rounded-xl outline-none max-sm:p-2 max-sm:px-3' type="text" placeholder='doe'/>
+            <input id='lastName' name='lastName' className='border-2 border-[#DADADA] p-3 px-4 rounded-xl outline-none max-sm:p-2 max-sm:px-3' type="text" placeholder='doe'/>
           </div>
           <div className='flex flex-col w-full gap-2 max-md:col-span-2'>
             <label className='font-semibold max-sm:text-sm' htmlFor="email">Athlete's Email Address:*</label>
-            <input id='email' className='border-2 border-[#DADADA] p-3 px-4 rounded-xl outline-none max-sm:p-2 max-sm:px-3' type="email" placeholder='jane@email.com'/>
+            <input id='email' name='email' className='border-2 border-[#DADADA] p-3 px-4 rounded-xl outline-none max-sm:p-2 max-sm:px-3' type="email" placeholder='jane@email.com'/>
           </div>
           <div className='flex flex-col w-full gap-2 max-md:col-span-2'>
             <label className='font-semibold max-sm:text-sm' htmlFor="number">Athlete's Cell #:</label>
-            <input id='number' className='[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none border-2 border-[#DADADA] p-3 px-4 rounded-xl outline-none max-sm:p-2 max-sm:px-3' type="number" placeholder='(123) 456-7890'/>
+            <input id='phoneNumber' name='phoneNumber' className='[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none border-2 border-[#DADADA] p-3 px-4 rounded-xl outline-none max-sm:p-2 max-sm:px-3' type="number" placeholder='(123) 456-7890'/>
           </div>
           <div className='flex flex-col w-full gap-2 max-md:col-span-2'>
             <label className='font-semibold max-sm:text-sm' htmlFor="inquiry">Athlete's Graduation Year:*</label>
-            <select defaultValue='' name="" id="inquiry" className='border-2 border-[#DADADA] bg-white p-3 px-4 rounded-xl outline-none max-sm:p-2 max-sm:px-3 cursor-pointer'>
+            <select defaultValue='' name="graduationYear" id="inquiry" className='border-2 border-[#DADADA] bg-white p-3 px-4 rounded-xl outline-none max-sm:p-2 max-sm:px-3 cursor-pointer'>
               <option value="">Select</option>
-              <option value="test">Test</option>
-              <option value="test1">Test1</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
             </select>
           </div>
           <div className='flex flex-col w-full gap-2 max-md:col-span-2'>
             <label className='font-semibold max-sm:text-sm' htmlFor="password">Password:</label>
-            <input id='password' className='border-2 border-[#DADADA] p-3 px-4 rounded-xl outline-none max-sm:p-2 max-sm:px-3' type="password" placeholder='●●●●●●'/>
+            <input id='password' name='password' className='border-2 border-[#DADADA] p-3 px-4 rounded-xl outline-none max-sm:p-2 max-sm:px-3' type="password" placeholder='●●●●●●'/>
           </div>
           <div className='flex flex-col w-full gap-2 max-md:col-span-2'>
             <label className='font-semibold max-sm:text-sm' htmlFor="confirm-password">Confirm Password:</label>
