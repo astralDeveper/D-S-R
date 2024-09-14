@@ -8,7 +8,7 @@ const page = () => {
 
 
 
-        <form onSubmit={handleSubmit} className='grid grid-cols-2 mt-14 w-[1200px] max-xl:w-full max-md:mt-8 max-md:w-full mx-auto gap-10 max-sm:gap-6'>
+        <form  className='grid grid-cols-2 mt-14 w-[1200px] max-xl:w-full max-md:mt-8 max-md:w-full mx-auto gap-10 max-sm:gap-6'>
           <div className='flex flex-col w-full gap-2 max-md:col-span-2'>
             <label className='font-semibold max-sm:text-sm' htmlFor="first">Athlete's First Name:*</label>
             <input id='firstName' name='firstName' className='border-2 border-[#DADADA] p-3 px-4 rounded-xl outline-none max-sm:p-2 max-sm:px-3' type="text" placeholder='John'/>

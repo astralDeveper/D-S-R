@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image"; // Import Image from next/image
 import bannergirl from "../public/bannergirl.png";
+import Link from "next/link";
 
 const IntroBanner = () => {
   return (
@@ -19,7 +20,7 @@ const IntroBanner = () => {
               Your recruitment starts here......
             </p>
             <div className="flex justify-center">
-            <button className='bg-white hover:bg-[#ffffffad] transition-all text-[#012555] p-2 px-6 text-2xl font-medium rounded-lg max-xl:text-lg max-sm:text-sm max-sm:font-medium'>Join Today</button>
+            <Link href="/pricing" className='bg-white hover:bg-[#ffffffad] transition-all text-[#012555] p-2 px-6 text-2xl font-medium rounded-lg max-xl:text-lg max-sm:text-sm max-sm:font-medium'>Join Today</Link>
 
             </div>
           </div>

@@ -5,6 +5,7 @@ import process1 from '@/assets/process1.png'
 import process2 from '@/assets/process2.png'
 import process3 from '@/assets/process3.png'
 import IntroBanner from "@/components/IntroBanner";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -22,8 +23,8 @@ export default function Home() {
           <div className="w-[50%] transition-all max-lg:w-full">
             <h2 className="text-2xl font-semibold text-[#012555]">Elevate your recruiting game 
             with a custom player profile</h2>
-            <p className="mt-4">Our custom profiles are crafted to highlight each athlete's unique talents, academic dedication, and readiness to excel at the collegiate level, ensuring coaches have all the information they need to make informed recruiting decisions.</p>
-            <button className='bg-[#012555] hover:bg-[#012555ad] transition-all text-white p-2 px-6 text-2xl font-medium rounded-lg max-xl:text-lg max-sm:text-sm max-sm:font-medium mt-4'>Join Today</button>
+            <p className="my-4">Our custom profiles are crafted to highlight each athlete's unique talents, academic dedication, and readiness to excel at the collegiate level, ensuring coaches have all the information they need to make informed recruiting decisions.</p>
+            <Link href="/pricing" className='bg-[#012555] hover:bg-[#012555ad] transition-all text-white p-2 px-6 text-2xl font-medium rounded-lg max-xl:text-lg max-sm:text-sm max-sm:font-medium mt-4'>Join Today</Link>
           </div>
 
           <div className="max-md:flex max-md:justify-center max-md:w-full ">
@@ -36,8 +37,8 @@ export default function Home() {
           <div className="w-[50%] transition-all max-lg:w-full">
             <h2 className="text-2xl font-semibold text-[#012555]">The smart way to find your
             perfect school fit</h2>
-            <p className="mt-4">Diamond Sports Recruiting uses predicitive analytics to help find the best fit for you based on what the schools athletic needs are for your recruiting class and what your needs are academically.</p>
-            <button className='bg-[#012555] hover:bg-[#012555ad] transition-all text-white p-2 px-6 text-2xl font-medium rounded-lg max-xl:text-lg max-sm:text-sm max-sm:font-medium mt-4'>Join Today</button>
+            <p className="my-4">Diamond Sports Recruiting uses predicitive analytics to help find the best fit for you based on what the schools athletic needs are for your recruiting class and what your needs are academically.</p>
+            <Link href="/pricing" className='bg-[#012555] hover:bg-[#012555ad] transition-all text-white p-2 px-6 text-2xl font-medium rounded-lg max-xl:text-lg max-sm:text-sm max-sm:font-medium mt-10'>Join Today</Link>
           </div>
 
           <div className="max-md:flex max-md:justify-center max-md:w-full ">
@@ -78,7 +79,7 @@ export default function Home() {
 
     <div className="bg-[#012555] flex items-center justify-center mt-10 p-14 max-sm:p-8 max-sm:text-center gap-14 max-sm:flex-wrap">
       <h2 className="text-2xl font-semibold text-white w-[30%] max-xl:w-[60%] max-sm:w-full">Are you ready to join Diamond Sports Recruiting?</h2>
-      <button className='bg-white hover:bg-[#ffffffad] transition-all text-[#012555] p-2 px-6 text-2xl font-medium rounded-lg max-xl:text-lg max-sm:text-sm max-sm:font-medium'>Join Today</button>
+      <Link href="/pricing" className='bg-white hover:bg-[#ffffffad] transition-all text-[#012555]  p-2 px-6 text-2xl font-medium rounded-lg max-xl:text-lg max-sm:text-sm max-sm:font-medium'>Join Today</Link>
     </div>
 
     </div>
