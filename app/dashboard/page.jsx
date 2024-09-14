@@ -1,7 +1,10 @@
 import HomeCard from '@/components/dashboard/HomeCard'
 import React from 'react'
 import companyLogo from '@/assets/dashboard/company-logo.png'
+import profileUser from '@/assets/dashboard/profile-user.svg'
+import ballImage from '@/assets/dashboard/ball-img.png'
 import HomeCard2 from '@/components/dashboard/HomeCard2'
+import HomeCard3 from '@/components/dashboard/HomeCard3'
 
 const page = () => {
 
@@ -76,14 +79,49 @@ const page = () => {
       city: "Kanas City, KS"
     },
   ]
+
+  const cardArr3 = [
+    {
+      userName: "Andy William",
+      userImage: profileUser,
+      cardHeader: ballImage,
+      videoTitle: "Name of the Video",
+      views: "53K views",
+      date: "2 weeks ago"
+    },
+    {
+      userName: "Andy William",
+      userImage: profileUser,
+      cardHeader: ballImage,
+      videoTitle: "Name of the Video",
+      views: "53K views",
+      date: "2 weeks ago"
+    },
+    {
+      userName: "Andy William",
+      userImage: profileUser,
+      cardHeader: ballImage,
+      videoTitle: "Name of the Video",
+      views: "53K views",
+      date: "2 weeks ago"
+    },
+    {
+      userName: "Andy William",
+      userImage: profileUser,
+      cardHeader: ballImage,
+      videoTitle: "Name of the Video",
+      views: "53K views",
+      date: "2 weeks ago"
+    },
+  ]
   return (
     <>
     <div className=''>
-      <div className='mt-4 grid grid-cols-[55%_auto] gap-6 max-lg:grid-cols-1'>
+      <div className=' grid grid-cols-[55%_auto] gap-6 max-lg:grid-cols-1'>
         <div className=''>
           <h2 className='text-lg font-semibold'>Favorites</h2>
-          <div className='h-[900px] overflow-y-auto'>
-            <div className='flex flex-col gap-6 mt-6 '>
+          <div className='h-[900px] overflow-y-auto mt-6'>
+            <div className='flex flex-col gap-6  '>
               {cardArr.map((item, index)=>{
                 return <HomeCard image={item.image} head={item.head} description={item.description} web={item.web} location={item.location} tuitionCost={item.tuitionCost} acceptanceRate={item.acceptanceRate} key={index}/>
               })}   
@@ -99,6 +137,21 @@ const page = () => {
               })}
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className='mt-6'>
+        <div className='flex items-center justify-between'>
+          <h2 className='text-lg font-semibold'>Tutorials</h2>
+          <button className='p-2 px-8 text-lg rounded-xl bg-[#012555] hover:bg-[#012555b6] text-white transition-all'>View All</button>
+        </div>
+
+        <div className='grid grid-cols-4 gap-4 mt-6 max-xl:grid-cols-2 max-md:grid-cols-1'>
+          {cardArr3.map((item)=>{
+            return <HomeCard3 cardBanner={item.cardHeader} profileImage={item.userImage} userName={item.userName} videoTitle={item.videoTitle} views={item.views} weeks={item.date}/>
+          })}
+          
+         
         </div>
       </div>
     </div>

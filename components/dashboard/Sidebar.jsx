@@ -205,7 +205,7 @@ const Sidebar = (props) => {
                 />
             )}
 
-            <div className={`p-4 sm:ml-64 bg-[#FAFBFC] min-h-screen `}>
+            <div className={`p-10 sm:ml-64 bg-[#FAFBFC] min-h-screen `}>
                 {props.children}
             </div>
         </>
