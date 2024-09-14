@@ -44,7 +44,7 @@ const Sidebar = (props) => {
           </div>
           </div>
         
-          <div className='flex items-center justify-between gap-2 p-4 sm:ml-64 '>
+          <div className='flex items-center justify-between gap-2 p-4 px-10 sm:ml-64 '>
             <div className='flex items-center gap-2 '>
               <button
                   onClick={toggleSidebar}
