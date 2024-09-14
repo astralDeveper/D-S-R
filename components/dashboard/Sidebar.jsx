@@ -88,100 +88,100 @@ const Sidebar = (props) => {
                             <Link
                                 onClick={toggleClose}
                                 href="/dashboard"
-                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard" ? "bg-gray-100 dark:text-[#012555] font-semibold dark:hover:bg-gray-200" : ""} dark:text-white hover:bg-gray-100 transition-all dark:hover:bg-gray-700 group`}
+                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard" ? "bg-gray-100 text-[#012555] font-semibold hover:bg-gray-200" : "hover:bg-gray-700"} dark:text-white  transition-all  group`}
                             >
                                 <Image className={pathname === "/dashboard" ? "" : "invert"} src={sideIcon} width={25} height={25} alt='Dashboard Icon'/>
-                                <span className="ms-3">Dashboard</span>
+                                <span className={`ms-3 ${pathname === "/dashboard" ? "text-[#012555]" : "text-white"}`}>Dashboard</span>
                             </Link>
                         </li>
                         <li>
                             <Link
                                 onClick={toggleClose}
                                 href="/dashboard/player-profile"
-                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard/player-profile" ? "bg-gray-100 dark:text-[#012555] font-semibold dark:hover:bg-gray-200" : ""} dark:text-white hover:bg-gray-100 transition-all dark:hover:bg-gray-700 group`}
+                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard/player-profile" ? "bg-gray-100 text-[#012555] font-semibold hover:bg-gray-200" : "hover:bg-gray-700"} dark:text-white  transition-all  group`}
                             >
                                 <Image className={pathname === "/dashboard/player-profile" ? "" : "invert"} src={sideIcon} width={25} height={25} alt='Dashboard Icon'/>
-                                <span className="ms-3">Player Profile</span>
+                                <span className={`ms-3 ${pathname === "/dashboard/player-profile" ? "text-[#012555]" : "text-white"}`}>Player Profile</span>
                             </Link>
                         </li>
                         <li>
                             <Link
                                 onClick={toggleClose}
                                 href="/dashboard/college"
-                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard/college" ? "bg-gray-100 dark:text-[#012555] font-semibold dark:hover:bg-gray-200" : ""} dark:text-white hover:bg-gray-100 transition-all dark:hover:bg-gray-700 group`}
+                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard/college" ? "bg-gray-100 text-[#012555] font-semibold hover:bg-gray-200" : "hover:bg-gray-700"} dark:text-white  transition-all  group`}
                             >
                                 <Image className={pathname === "/dashboard/college" ? "" : "invert"} src={sideIcon} width={25} height={25} alt='Dashboard Icon'/>
-                                <span className="ms-3">College Fit Finder</span>
+                                <span className={`ms-3 ${pathname === "/dashboard/college" ? "text-[#012555]" : "text-white"}`}>College Fit Finder</span>
                             </Link>
                         </li>
                         <li>
                             <Link
                                 onClick={toggleClose}
                                 href="/dashboard/scholorship"
-                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard/scholorship" ? "bg-gray-100 dark:text-[#012555] font-semibold dark:hover:bg-gray-200" : ""} dark:text-white hover:bg-gray-100 transition-all dark:hover:bg-gray-700 group`}
+                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard/scholorship" ? "bg-gray-100 text-[#012555] font-semibold hover:bg-gray-200" : "hover:bg-gray-700"} dark:text-white  transition-all  group`}
                             >
                                 <Image className={pathname === "/dashboard/scholorship" ? "" : "invert"} src={sideIcon} width={25} height={25} alt='Dashboard Icon'/>
-                                <span className="ms-3">Scholorship by State</span>
+                                <span className={`ms-3 ${pathname === "/dashboard/scholorship" ? "text-[#012555]" : "text-white"}`}>Scholorship by State</span>
                             </Link>
                         </li>
                         <li>
                             <Link
                                 onClick={toggleClose}
                                 href="/dashboard/favorites"
-                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard/favorites" ? "bg-gray-100 dark:text-[#012555] font-semibold dark:hover:bg-gray-200" : ""} dark:text-white hover:bg-gray-100 transition-all dark:hover:bg-gray-700 group`}
+                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard/favorites" ? "bg-gray-100 text-[#012555] font-semibold hover:bg-gray-200" : "hover:bg-gray-700"} dark:text-white  transition-all  group`}
                             >
                                 <Image className={pathname === "/dashboard/favorites" ? "" : "invert"} src={sideIcon} width={25} height={25} alt='Dashboard Icon'/>
-                                <span className="ms-3">Favorites</span>
+                                <span className={`ms-3 ${pathname === "/dashboard/favorites" ? "text-[#012555]" : "text-white"}`}>Favorites</span>
                             </Link>
                         </li>
                         <li>
                             <Link
                                 onClick={toggleClose}
                                 href="/dashboard/coaches"
-                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard/coaches" ? "bg-gray-100 dark:text-[#012555] font-semibold dark:hover:bg-gray-200" : ""} dark:text-white hover:bg-gray-100 transition-all dark:hover:bg-gray-700 group`}
+                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard/coaches" ? "bg-gray-100 text-[#012555] font-semibold hover:bg-gray-200" : "hover:bg-gray-700"} dark:text-white  transition-all  group`}
                             >
                                 <Image className={pathname === "/dashboard/coaches" ? "" : "invert"} src={sideIcon} width={25} height={25} alt='Dashboard Icon'/>
-                                <span className="ms-3">Coaches Contact</span>
+                                <span className={`ms-3 ${pathname === "/dashboard/coaches" ? "text-[#012555]" : "text-white"}`}>Coaches Contact</span>
                             </Link>
                         </li>
                         <li>
                             <Link
                                 onClick={toggleClose}
                                 href="/dashboard/recruiting"
-                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard/recruiting" ? "bg-gray-100 dark:text-[#012555] font-semibold dark:hover:bg-gray-200" : ""} dark:text-white hover:bg-gray-100 transition-all dark:hover:bg-gray-700 group`}
+                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard/recruiting" ? "bg-gray-100 text-[#012555] font-semibold hover:bg-gray-200" : "hover:bg-gray-700"} dark:text-white  transition-all  group`}
                             >
                                 <Image className={pathname === "/dashboard/recruiting" ? "" : "invert"} src={sideIcon} width={25} height={25} alt='Dashboard Icon'/>
-                                <span className="ms-3">Recruiting Plan</span>
+                                <span className={`ms-3 ${pathname === "/dashboard/recruiting" ? "text-[#012555]" : "text-white"}`}>Recruiting Plan</span>
                             </Link>
                         </li>
                         <li>
                             <Link
                                 onClick={toggleClose}
                                 href="/dashboard/tools"
-                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard/tools" ? "bg-gray-100 dark:text-[#012555] font-semibold dark:hover:bg-gray-200" : ""} dark:text-white hover:bg-gray-100 transition-all dark:hover:bg-gray-700 group`}
+                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard/tools" ? "bg-gray-100 text-[#012555] font-semibold hover:bg-gray-200" : "hover:bg-gray-700"} dark:text-white  transition-all  group`}
                             >
                                 <Image className={pathname === "/dashboard/tools" ? "" : "invert"} src={sideIcon} width={25} height={25} alt='Dashboard Icon'/>
-                                <span className="ms-3">Tools & Resources</span>
+                                <span className={`ms-3 ${pathname === "/dashboard/tools" ? "text-[#012555]" : "text-white"}`}>Tools & Resources</span>
                             </Link>
                         </li>
                         <li>
                             <Link
                                 onClick={toggleClose}
                                 href="/dashboard/tutorials"
-                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard/tutorials" ? "bg-gray-100 dark:text-[#012555] font-semibold dark:hover:bg-gray-200" : ""} dark:text-white hover:bg-gray-100 transition-all dark:hover:bg-gray-700 group`}
+                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard/tutorials" ? "bg-gray-100 text-[#012555] font-semibold hover:bg-gray-200" : "hover:bg-gray-700"} dark:text-white  transition-all  group`}
                             >
                                 <Image className={pathname === "/dashboard/tutorials" ? "" : "invert"} src={sideIcon} width={25} height={25} alt='Dashboard Icon'/>
-                                <span className="ms-3">Tutorials</span>
+                                <span className={`ms-3 ${pathname === "/dashboard/tutorials" ? "text-[#012555]" : "text-white"}`}>Tutorials</span>
                             </Link>
                         </li>
                         <li>
                             <Link
                                 onClick={toggleClose}
                                 href="/dashboard/help"
-                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard/help" ? "bg-gray-100 dark:text-[#012555] font-semibold dark:hover:bg-gray-200" : ""} dark:text-white hover:bg-gray-100 transition-all dark:hover:bg-gray-700 group`}
+                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard/help" ? "bg-gray-100 text-[#012555] font-semibold hover:bg-gray-200" : "hover:bg-gray-700"} dark:text-white  transition-all  group`}
                             >
                                 <Image className={pathname === "/dashboard/help" ? "" : "invert"} src={sideIcon} width={25} height={25} alt='Dashboard Icon'/>
-                                <span className="ms-3">Help</span>
+                                <span className={`ms-3 ${pathname === "/dashboard/help" ? "text-[#012555]" : "text-white"}`}>Help</span>
                             </Link>
                         </li>
                        
