@@ -1,0 +1,215 @@
+'use client'
+import React, { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import sideIcon from '@/assets/dashboard/sidebar/dashboard-btn-icon.svg';
+import logo from '@/assets/navbar/logo.png'
+import { HiMenuAlt2 } from 'react-icons/hi';
+import { IoMdMenu } from 'react-icons/io';
+import profileImg from '@/assets/dashboard/profile.png'
+import { TbLogout2 } from "react-icons/tb";
+import { FaRegBell } from 'react-icons/fa6';
+
+const Sidebar = (props) => {
+    const pathname = usePathname();
+    const [isOpen, setIsOpen] = useState(false);
+    const sidebarRef = useRef(null);
+
+    const toggleSidebar = () => {
+        setIsOpen(prevState => !prevState);
+    };
+    const toggleClose = () => {
+        setIsOpen(false);
+    };
+
+    const handleClickOutside = (event) => {
+        if (sidebarRef.current && !sidebarRef.current.contains(event.target) && !event.target.closest('[data-drawer-toggle]')) {
+            setIsOpen(false);
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
+
+    return (
+        <>
+        <div className='hidden max-sm:block'>
+          <div className='flex justify-between p-4 items-center text-[#012555]'>
+          <TbLogout2 className='text-2xl hover:text-[#01255598] cursor-pointer transition-all'/>
+            <Link href={'/dashboard'}><Image src={logo} alt='img' width={100} height={60}/></Link>
+            <FaRegBell className='text-4xl text-[#FFA412] bg-[#FFFAF1] rounded-xl p-2 transition-all cursor-pointer hover:bg-[#f0ebe2]'/>
+          </div>
+          </div>
+        
+          <div className='flex items-center justify-between gap-2 p-4 sm:ml-64 bg-gray-200'>
+            <div className='flex items-center gap-2 '>
+              <button
+                  onClick={toggleSidebar}
+                  data-drawer-toggle="default-sidebar"
+                  aria-controls="default-sidebar"
+                  type="button"
+                  className="inline-flex items-center text-sm text-[#012555] rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none"
+                  >
+                  {/* <span className="sr-only">Open sidebar</span> */}
+                  <IoMdMenu className='text-5xl p-2 max-sm:text-2xl max-sm:p-0'/>
+              </button>
+             
+              <h2 className='text-xl text-[#012555] max-sm:font-normal font-semibold max-md:text-sm max-sm:text-xs'>{pathname === "/dashboard" ? "Dashboard" : pathname === "/dashboard/player-profile" ? "Player Profile" : pathname === "/dashboard/college" ? "College Fit Finder" :  pathname === "/dashboard/scholorship" ? "Scholorship by State" : pathname === "/dashboard/favorites" ? "Favorites" : pathname === "/dashboard/coaches" ? "Coaches Contact" : pathname === "/dashboard/recruiting" ? "Recruiting Plan" : pathname === "/dashboard/tools" ? "Tools & Resources" : pathname === "/dashboard/tutorials" ? "Tutorials" : pathname === "/dashboard/help" ? "Help" : "" }</h2>
+            </div>
+            <div className='flex items-center gap-2'>
+             <FaRegBell className='text-4xl text-[#FFA412] bg-[#FFFAF1] rounded-xl p-2 transition-all cursor-pointer hover:bg-[#f0ebe2] max-sm:hidden'/>
+              <h2 className=' text-[#012555] font-semibold max-sm:font-normal text-sm max-sm:text-xs'>Musfiq Arham</h2>
+              <Image className='max-sm:rounded-full rounded-[16px] max-sm:w-[30px]' src={profileImg} alt='img' width={50} height={50}/>
+
+            </div>
+          </div>
+          
+            <aside
+                ref={sidebarRef}
+                id="default-sidebar"
+                className={`fixed top-0 left-0 z-40 w-64 h-screen transition-transform ${isOpen ? "translate-x-0" : "-translate-x-full"} sm:translate-x-0`}
+                aria-label="Sidebar"
+            >
+                <div className="h-full px-2 pt-8 overflow-y-auto bg-gray-50 dark:bg-[#012555] flex flex-col justify-between pb-4 gap-2">
+                    <ul className="flex flex-col  gap-y-1 font-medium">
+                        <li>
+                            <Link
+                                onClick={toggleClose}
+                                href="/dashboard"
+                                className={`flex items-center p-2 transition-all group`}
+                            >
+                                <span className="ms-3 mb-6"><Image src={logo} alt='img' width={150} height={50}/></span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                onClick={toggleClose}
+                                href="/dashboard"
+                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard" ? "bg-gray-100 dark:text-[#012555] font-semibold dark:hover:bg-gray-200" : ""} dark:text-white hover:bg-gray-100 transition-all dark:hover:bg-gray-700 group`}
+                            >
+                                <Image className={pathname === "/dashboard" ? "" : "invert"} src={sideIcon} width={25} height={25} alt='Dashboard Icon'/>
+                                <span className="ms-3">Dashboard</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                onClick={toggleClose}
+                                href="/dashboard/player-profile"
+                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard/player-profile" ? "bg-gray-100 dark:text-[#012555] font-semibold dark:hover:bg-gray-200" : ""} dark:text-white hover:bg-gray-100 transition-all dark:hover:bg-gray-700 group`}
+                            >
+                                <Image className={pathname === "/dashboard/player-profile" ? "" : "invert"} src={sideIcon} width={25} height={25} alt='Dashboard Icon'/>
+                                <span className="ms-3">Player Profile</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                onClick={toggleClose}
+                                href="/dashboard/college"
+                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard/college" ? "bg-gray-100 dark:text-[#012555] font-semibold dark:hover:bg-gray-200" : ""} dark:text-white hover:bg-gray-100 transition-all dark:hover:bg-gray-700 group`}
+                            >
+                                <Image className={pathname === "/dashboard/college" ? "" : "invert"} src={sideIcon} width={25} height={25} alt='Dashboard Icon'/>
+                                <span className="ms-3">College Fit Finder</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                onClick={toggleClose}
+                                href="/dashboard/scholorship"
+                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard/scholorship" ? "bg-gray-100 dark:text-[#012555] font-semibold dark:hover:bg-gray-200" : ""} dark:text-white hover:bg-gray-100 transition-all dark:hover:bg-gray-700 group`}
+                            >
+                                <Image className={pathname === "/dashboard/scholorship" ? "" : "invert"} src={sideIcon} width={25} height={25} alt='Dashboard Icon'/>
+                                <span className="ms-3">Scholorship by State</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                onClick={toggleClose}
+                                href="/dashboard/favorites"
+                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard/favorites" ? "bg-gray-100 dark:text-[#012555] font-semibold dark:hover:bg-gray-200" : ""} dark:text-white hover:bg-gray-100 transition-all dark:hover:bg-gray-700 group`}
+                            >
+                                <Image className={pathname === "/dashboard/favorites" ? "" : "invert"} src={sideIcon} width={25} height={25} alt='Dashboard Icon'/>
+                                <span className="ms-3">Favorites</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                onClick={toggleClose}
+                                href="/dashboard/coaches"
+                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard/coaches" ? "bg-gray-100 dark:text-[#012555] font-semibold dark:hover:bg-gray-200" : ""} dark:text-white hover:bg-gray-100 transition-all dark:hover:bg-gray-700 group`}
+                            >
+                                <Image className={pathname === "/dashboard/coaches" ? "" : "invert"} src={sideIcon} width={25} height={25} alt='Dashboard Icon'/>
+                                <span className="ms-3">Coaches Contact</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                onClick={toggleClose}
+                                href="/dashboard/recruiting"
+                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard/recruiting" ? "bg-gray-100 dark:text-[#012555] font-semibold dark:hover:bg-gray-200" : ""} dark:text-white hover:bg-gray-100 transition-all dark:hover:bg-gray-700 group`}
+                            >
+                                <Image className={pathname === "/dashboard/recruiting" ? "" : "invert"} src={sideIcon} width={25} height={25} alt='Dashboard Icon'/>
+                                <span className="ms-3">Recruiting Plan</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                onClick={toggleClose}
+                                href="/dashboard/tools"
+                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard/tools" ? "bg-gray-100 dark:text-[#012555] font-semibold dark:hover:bg-gray-200" : ""} dark:text-white hover:bg-gray-100 transition-all dark:hover:bg-gray-700 group`}
+                            >
+                                <Image className={pathname === "/dashboard/tools" ? "" : "invert"} src={sideIcon} width={25} height={25} alt='Dashboard Icon'/>
+                                <span className="ms-3">Tools & Resources</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                onClick={toggleClose}
+                                href="/dashboard/tutorials"
+                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard/tutorials" ? "bg-gray-100 dark:text-[#012555] font-semibold dark:hover:bg-gray-200" : ""} dark:text-white hover:bg-gray-100 transition-all dark:hover:bg-gray-700 group`}
+                            >
+                                <Image className={pathname === "/dashboard/tutorials" ? "" : "invert"} src={sideIcon} width={25} height={25} alt='Dashboard Icon'/>
+                                <span className="ms-3">Tutorials</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                onClick={toggleClose}
+                                href="/dashboard/help"
+                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard/help" ? "bg-gray-100 dark:text-[#012555] font-semibold dark:hover:bg-gray-200" : ""} dark:text-white hover:bg-gray-100 transition-all dark:hover:bg-gray-700 group`}
+                            >
+                                <Image className={pathname === "/dashboard/help" ? "" : "invert"} src={sideIcon} width={25} height={25} alt='Dashboard Icon'/>
+                                <span className="ms-3">Help</span>
+                            </Link>
+                        </li>
+                       
+                        
+                    </ul>
+                    <Link
+                        onClick={toggleClose}
+                        href="/"
+                        className={`flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-gray-100 transition-all dark:hover:bg-gray-700 group`}>
+                        <TbLogout2 className='text-2xl transition-all rotate-180'/>
+                        <span className="ms-3">Sign out</span>
+                    </Link>
+                </div>
+            </aside>
+
+            {/* Background Tint */}
+            {isOpen && (
+                <div
+                    className="fixed inset-0 bg-black/50 z-30"
+                    onClick={toggleSidebar}
+                />
+            )}
+
+            <div className={`p-4 sm:ml-64 `}>
+                {props.children}
+            </div>
+        </>
+    );
+};
+
+export default Sidebar;
