@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -13,20 +14,20 @@ const Footer = () => {
                 </h2>
                 <nav className="list-none mb-10 space-y-3">
                   <li>
-                    <a className="text-gray-300 ">Pricing</a>
+                    <Link href="/pricing" className="text-gray-300 ">Pricing</Link>
                   </li>
                   <li>
-                    <a className="text-gray-300 ">
+                    <Link href="/free-recruiting" className="text-gray-300 ">
                       Free Recruiting Tips
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="text-gray-300 ">
+                    <Link href="/diamond-sports" className="text-gray-300 ">
                       Why Diamond Sports Recruiting
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="text-gray-300 ">FAQ</a>
+                    <Link href="/faq" className="text-gray-300 ">FAQ</Link>
                   </li>
                 </nav>
               </div>
@@ -36,20 +37,20 @@ const Footer = () => {
                 </h2>
                 <nav className="list-none mb-10 space-y-3">
                   <li>
-                    <a className="text-gray-300 ">Pricing</a>
+                    <Link href="/" className="text-gray-300 ">Home</Link>
                   </li>
                   <li>
-                    <a className="text-gray-300 ">
-                      Free Recruiting Tips
-                    </a>
+                    <Link href="/about-us" className="text-gray-300 ">
+                    About Us
+                    </Link>
                   </li>
                   <li>
-                    <a className="text-gray-300 ">
-                      Why Diamond Sports Recruiting
-                    </a>
+                    <Link href="/customer-support" className="text-gray-300 ">
+                    Customer Support
+                    </Link>
                   </li>
                   <li>
-                    <a className="text-gray-300 ">FAQ</a>
+                    <Link href="/login" className="text-gray-300 ">Login</Link>
                   </li>
                 </nav>
               </div>
@@ -59,20 +60,20 @@ const Footer = () => {
                 </h2>
                 <nav className="list-none mb-10 space-y-3">
                   <li>
-                    <a className="text-gray-300 ">Pricing</a>
+                    <Link href="/privacy-policy" className="text-gray-300 ">Privacy</Link>
                   </li>
                   <li>
-                    <a className="text-gray-300 ">
-                      Free Recruiting Tips
-                    </a>
+                    <Link href="/terms-of-use" className="text-gray-300 ">
+                    Terms
+                    </Link>
                   </li>
                   <li>
-                    <a className="text-gray-300 ">
-                      Why Diamond Sports Recruiting
-                    </a>
+                    <Link href="/user-licence" className="text-gray-300 ">
+                    End User License Agreement
+                    </Link>
                   </li>
                   <li>
-                    <a className="text-gray-300 ">FAQ</a>
+                    <a className="text-gray-300 ">Subscription Agreement</a>
                   </li>
                 </nav>
               </div>
