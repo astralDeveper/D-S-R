@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { useParams, usePathname } from 'next/navigation';
 import sideIcon from '@/assets/dashboard/sidebar/dashboard-btn-icon.svg';
 import logo from '@/assets/navbar/logo.png'
 import { HiMenuAlt2 } from 'react-icons/hi';
@@ -12,6 +12,10 @@ import { TbLogout2 } from "react-icons/tb";
 import { FaRegBell } from 'react-icons/fa6';
 
 const Sidebar = (props) => {
+    const params = useParams()
+
+    console.log(`${params.sport}/${params.state}`);
+    
     const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
     const sidebarRef = useRef(null);
@@ -44,7 +48,7 @@ const Sidebar = (props) => {
           </div>
           </div>
         
-          <div className='flex items-center justify-between gap-2 p-4 px-10 sm:ml-64 '>
+          <div className='flex items-center justify-between gap-2 p-4 px-10 w-full bg-white sm:fixed sticky top-0'>
             <div className='flex items-center gap-2 '>
               <button
                   onClick={toggleSidebar}
@@ -57,7 +61,7 @@ const Sidebar = (props) => {
                   <IoMdMenu className='text-5xl p-2 max-sm:text-2xl max-sm:p-0'/>
               </button>
              
-              <h2 className='text-xl text-[#012555] max-sm:font-normal font-semibold max-md:text-sm max-sm:text-xs'>{pathname === "/dashboard" ? "Dashboard" : pathname === "/dashboard/player-profile" ? "Player Profile" : pathname === "/dashboard/college" ? "College Fit Finder" :  pathname === "/dashboard/scholorship" ? "Scholorship by State" : pathname === "/dashboard/favorites" ? "Favorites" : pathname === "/dashboard/coaches" ? "Coaches Contact" : pathname === "/dashboard/recruiting" ? "Recruiting Plan" : pathname === "/dashboard/tools" ? "Tools & Resources" : pathname === "/dashboard/tutorials" ? "Tutorials" : pathname === "/dashboard/help" ? "Help" : "" }</h2>
+              <h2 className='text-xl text-[#012555] max-sm:font-normal font-semibold max-md:text-sm max-sm:text-xs sm:ml-64'>{pathname === "/dashboard" ? "Dashboard" : pathname === "/dashboard/player-profile" ? "Player Profile" : pathname === "/dashboard/college" ? "College Fit Finder" :  pathname === "/dashboard/athletic-scholorships" || pathname === `/dashboard/athletic-scholorships/${params.sport}` || pathname === `/dashboard/athletic-scholorships/${params.sport}/${params.state}` ? "Scholorship by State" : pathname === "/dashboard/favorites" ? "Favorites" : pathname === "/dashboard/coaches" ? "Coaches Contact" : pathname === "/dashboard/recruiting" ? "Recruiting Plan" : pathname === "/dashboard/tools" ? "Tools & Resources" : pathname === "/dashboard/tutorials" ? "Tutorials" : pathname === "/dashboard/help" ? "Help" : "" }</h2>
             </div>
             <div className='flex items-center gap-2'>
              <FaRegBell className='text-4xl text-[#FFA412] bg-[#FFFAF1] rounded-xl p-2 transition-all cursor-pointer hover:bg-[#f0ebe2] max-sm:hidden'/>
@@ -117,11 +121,11 @@ const Sidebar = (props) => {
                         <li>
                             <Link
                                 onClick={toggleClose}
-                                href="/dashboard/scholorship"
-                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard/scholorship" ? "bg-gray-100 text-[#012555] font-semibold hover:bg-gray-200" : "hover:bg-gray-700"} dark:text-white  transition-all  group`}
+                                href="/dashboard/athletic-scholorships"
+                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard/athletic-scholorships" || pathname === `/dashboard/athletic-scholorships/${params.sport}` || pathname === `/dashboard/athletic-scholorships/${params.sport}/${params.state}`  ? "bg-gray-100 text-[#012555] font-semibold hover:bg-gray-200" : "hover:bg-gray-700"} dark:text-white  transition-all  group`}
                             >
-                                <Image className={pathname === "/dashboard/scholorship" ? "" : "invert"} src={sideIcon} width={25} height={25} alt='Dashboard Icon'/>
-                                <span className={`ms-3 ${pathname === "/dashboard/scholorship" ? "text-[#012555]" : "text-white"}`}>Scholorship by State</span>
+                                <Image className={pathname === "/dashboard/athletic-scholorships" || pathname === `/dashboard/athletic-scholorships/${params.sport}` || pathname === `/dashboard/athletic-scholorships/${params.sport}/${params.state}`  ? "" : "invert"} src={sideIcon} width={25} height={25} alt='Dashboard Icon'/>
+                                <span className={`ms-3 ${pathname === "/dashboard/athletic-scholorships" || pathname === `/dashboard/athletic-scholorships/${params.sport}` || pathname === `/dashboard/athletic-scholorships/${params.sport}/${params.state}`  ? "text-[#012555]" : "text-white"}`}>Scholorship by State</span>
                             </Link>
                         </li>
                         <li>
@@ -205,7 +209,7 @@ const Sidebar = (props) => {
                 />
             )}
 
-            <div className={`p-10 sm:ml-64 bg-[#FAFBFC] min-h-screen `}>
+            <div className={`p-10 sm:ml-64 pt-28 bg-[#FAFBFC] min-h-screen `}>
                 {props.children}
             </div>
         </>
