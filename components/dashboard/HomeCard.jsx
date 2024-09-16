@@ -38,12 +38,12 @@ const HomeCard = (props) => {
           <div className='flex items-center gap-6 max-sm:flex-wrap max-sm:w-full'>
             <div className='flex items-center gap-6'>
               <div className='flex items-center gap-2 '>
-                <input className='cursor-pointer' type="checkbox" name="Compare" id="compare" />
-                <label className='font-semibold cursor-pointer' htmlFor="compare">Compare</label>
+                <input className='cursor-pointer' type="checkbox" name="Compare" id={props.id} />
+                <label className='font-semibold cursor-pointer' htmlFor={props.id}>Compare</label>
               </div>
               <div className='flex items-center gap-2 '>
-                <input className='cursor-pointer' type="checkbox" name="save" id="save" />
-                <label className='font-semibold cursor-pointer' htmlFor="save">Save</label>
+                <input className='cursor-pointer' type="checkbox" name="save" id={props.index}/>
+                <label className='font-semibold cursor-pointer' htmlFor={props.index}>Save</label>
               </div>
             </div>
             <button className='p-2 px-4 rounded-xl max-sm:w-full bg-[#012555] hover:bg-[#012555b6] text-white transition-all'>View Details</button>

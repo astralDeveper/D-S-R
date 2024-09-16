@@ -123,7 +123,7 @@ const page = () => {
           <div className='h-[900px] overflow-y-auto mt-6'>
             <div className='flex flex-col gap-6  '>
               {cardArr.map((item, index)=>{
-                return <HomeCard image={item.image} head={item.head} description={item.description} web={item.web} location={item.location} tuitionCost={item.tuitionCost} acceptanceRate={item.acceptanceRate} key={index}/>
+                return <HomeCard index={index} id={item.length} image={item.image} head={item.head} description={item.description} web={item.web} location={item.location} tuitionCost={item.tuitionCost} acceptanceRate={item.acceptanceRate} key={index}/>
               })}   
             </div>
           </div>
@@ -132,8 +132,8 @@ const page = () => {
           <h2 className='text-lg font-semibold'>My Events</h2>
           <div className='h-[900px] overflow-y-auto mt-6'>
             <div className='flex flex-col gap-6  '>
-              {cardArr2.map((item)=>{
-                return <HomeCard2/>
+              {cardArr2.map((item, index)=>{
+                return <HomeCard2 key={index} head={item.head} date={item.date} city={item.city}/>
               })}
             </div>
           </div>
@@ -147,7 +147,7 @@ const page = () => {
         </div>
 
         <div className='grid grid-cols-4 gap-4 mt-6 max-xl:grid-cols-2 max-md:grid-cols-1'>
-          {cardArr3.map((item)=>{
+          {cardArr3.map((item, index)=>{
             return <HomeCard3 cardBanner={item.cardHeader} profileImage={item.userImage} userName={item.userName} videoTitle={item.videoTitle} views={item.views} weeks={item.date}/>
           })}
           
