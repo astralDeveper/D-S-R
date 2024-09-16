@@ -28,7 +28,7 @@ const HomeCard = (props) => {
           <div className='flex items-center gap-8'>
             <div>
               <p className='text-sm text-[#7C7C7C]'>Avg. Tuition Cost</p>
-              <h3 className='text-lg text-[#E51A1A] font-semibold mt-1'>{props.tuitionCost}</h3>
+              <h3 className='text-lg text-[#E51A1A] font-semibold mt-1'>${props.tuitionCost} /year</h3>
             </div>
             <div>
               <p className='text-sm text-[#7C7C7C]'>Acceptance Rate</p>
