@@ -19,7 +19,7 @@ const page = () => {
         </div>
 
       
-        <div className='max-w-screen-2xl mx-auto px-10 max-md:px-4 mt-10 flex gap-60 max-2xl:gap-40 max-lg:gap-20 max-md:flex-wrap max-md:mt-18 max-sm:gap-10'>
+        <div className='max-w-screen-2xl mx-auto px-10 max-md:px-4 mt-10 flex gap-60 max-2xl:gap-40 max-xl:gap-20 max-xl:flex-wrap max-md:mt-18 max-sm:gap-10'>
           <Link href="/dashboard/athletic-scholorships/softball">
             <div className='flex flex-col max-md:items-center'>
               <Image src={ball} alt='img' width={42} height={42}/>

@@ -16,7 +16,7 @@ const page = () => {
         },
         {
             name:"Alaska",
-            link:"#"
+            link:"alaska"
         },
         {
             name:"Arizona",
@@ -248,8 +248,8 @@ const page = () => {
   return (
     <>
         <div className='text-center'>
-            <p className=' py-5  max-sm:text-sm'><Link href='/dashboard/athletic-scholorships'>Athletic Scholarships</Link> / {params}</p>
-            <h1 className='font-bold text-5xl max-md:text-4xl max-sm:text-3xl'>{params} Scholarships</h1>
+            <p className=' py-5 max-sm:text-sm capitalize'><Link href='/dashboard/athletic-scholorships'>Athletic Scholarships</Link> / {params}</p>
+            <h1 className='font-bold text-5xl max-md:text-4xl max-sm:text-3xl capitalize'>{params} Scholarships</h1>
         </div>
         <div className='w-[800px] max-xl:w-full mx-auto mt-14  max-sm:hidden'>
             <Map/>
