@@ -116,7 +116,7 @@ const Page = () => {
   return (
     <>
       <div>
-        <div className='bg-white p-4 rounded-lg mb-6 w-full flex gap-4'>
+        <div className='bg-white p-4 rounded-lg mb-6 w-full flex gap-4 max-sm:flex-wrap'>
           <input
             className='border border-[#012555] p-2 px-4 rounded-md outline-none w-full'
             type="text"
@@ -178,26 +178,35 @@ const Page = () => {
           <table className='w-full overflow-x-auto border border-[#E9ECFC]'>
             <thead>
               <tr className='bg-[#F6F7F9] border border-[#E9ECFC]'>
-                <th className='text-start p-4 px-6'>School Name</th>
-                <th className='text-start p-4 px-6'>City</th>
-                <th className='text-start p-4 px-6'>Conference</th>
-                <th className='text-start p-4 px-6'>Division</th>
+                <th className='text-start p-4 px-6 max-sm:text-sm max-sm:p-2 max-sm:px-4'>School Name</th>
+                <th className='text-start p-4 px-6 max-sm:text-sm max-sm:p-2 max-sm:px-4'>City</th>
+                <th className='text-start p-4 px-6 max-sm:text-sm max-sm:p-2 max-sm:px-4'>Conference</th>
+                <th className='text-start p-4 px-6 max-sm:text-sm max-sm:p-2 max-sm:px-4'>Division</th>
               </tr>
             </thead>
             <tbody>
-              {currentItems.map((item, index) => (
-                <tr key={index}>
-                  <td className='p-4 px-6 bg-white border-y border-[#E9ECFC] text-blue-700'>
-                    <Link href={params.state + "/" + item.slug}>{item.schoolName}</Link>
+              {currentItems.length > 0 ? (
+                currentItems.map((item, index) => (
+                  <tr key={index}>
+                    <td className='p-4 px-6 max-sm:p-2 max-sm:px-4 max-sm:text-sm bg-white border-y border-[#E9ECFC] text-blue-700'>
+                      <Link href={params.state + "/" + item.slug}>{item.schoolName}</Link>
+                    </td>
+                    <td className='p-4 px-6 max-sm:p-2 max-sm:px-4 max-sm:text-sm bg-white border-y border-[#E9ECFC]'>{item.city}</td>
+                    <td className='p-4 px-6 max-sm:p-2 max-sm:px-4 max-sm:text-sm bg-white border-y border-[#E9ECFC]'>{item.conference}</td>
+                    <td className='p-4 px-6 max-sm:p-2 max-sm:px-4 max-sm:text-sm bg-white border-y border-[#E9ECFC]'>{item.division}</td>
+                  </tr>
+                ))
+              ) : (
+                <tr>
+                  <td colSpan="4" className='p-4 text-center'>
+                    No results found!
                   </td>
-                  <td className='p-4 px-6 bg-white border-y border-[#E9ECFC]'>{item.city}</td>
-                  <td className='p-4 px-6 bg-white border-y border-[#E9ECFC]'>{item.conference}</td>
-                  <td className='p-4 px-6 bg-white border-y border-[#E9ECFC]'>{item.division}</td>
                 </tr>
-              ))}
+              )}
             </tbody>
           </table>
-          <nav aria-label="Page navigation example" className='py-4'>
+          
+          <div aria-label="Page navigation example" className='py-4'>
             <ul className="inline-flex -space-x-px text-sm">
               <li>
                 <a
@@ -232,7 +241,7 @@ const Page = () => {
                 </a>
               </li>
             </ul>
-          </nav>
+          </div>
         </div>
       </div>
     </>

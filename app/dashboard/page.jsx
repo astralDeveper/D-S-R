@@ -16,7 +16,8 @@ const page = () => {
       location: "fsu.edu",
       description : "FSU, designated a preeminent university in the state of Florida, is one of the most respected research and learning institutions in the country.",
       tuitionCost : "$6,540/year",
-      acceptanceRate : "44%"
+      acceptanceRate : "44%",
+      id: 1234
     },
     {
       image: companyLogo,
@@ -25,7 +26,8 @@ const page = () => {
       location: "fsu.edu",
       description : "FSU, designated a preeminent university in the state of Florida, is one of the most respected research and learning institutions in the country.",
       tuitionCost : "$6,540/year",
-      acceptanceRate : "44%"
+      acceptanceRate : "44%",
+      id: 5678
     },
     {
       image: companyLogo,
@@ -34,7 +36,8 @@ const page = () => {
       location: "fsu.edu",
       description : "FSU, designated a preeminent university in the state of Florida, is one of the most respected research and learning institutions in the country.",
       tuitionCost : "$6,540/year",
-      acceptanceRate : "44%"
+      acceptanceRate : "44%",
+      id: 9876
     },
     {
       image: companyLogo,
@@ -43,7 +46,8 @@ const page = () => {
       location: "fsu.edu",
       description : "FSU, designated a preeminent university in the state of Florida, is one of the most respected research and learning institutions in the country.",
       tuitionCost : "$6,540/year",
-      acceptanceRate : "44%"
+      acceptanceRate : "44%",
+      id: 8769
     },
   ]
 
@@ -123,7 +127,7 @@ const page = () => {
           <div className='h-[900px] overflow-y-auto mt-6'>
             <div className='flex flex-col gap-6  '>
               {cardArr.map((item, index)=>{
-                return <HomeCard index={index} id={item.length} image={item.image} head={item.head} description={item.description} web={item.web} location={item.location} tuitionCost={item.tuitionCost} acceptanceRate={item.acceptanceRate} key={index}/>
+                return <HomeCard index={index} id={item.id} image={item.image} head={item.head} description={item.description} web={item.web} location={item.location} tuitionCost={item.tuitionCost} acceptanceRate={item.acceptanceRate} key={index}/>
               })}   
             </div>
           </div>
@@ -150,8 +154,6 @@ const page = () => {
           {cardArr3.map((item, index)=>{
             return <HomeCard3 cardBanner={item.cardHeader} profileImage={item.userImage} userName={item.userName} videoTitle={item.videoTitle} views={item.views} weeks={item.date}/>
           })}
-          
-         
         </div>
       </div>
     </div>

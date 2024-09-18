@@ -40,7 +40,7 @@ const Sidebar = (props) => {
 
     return (
         <>
-        <div className='hidden max-sm:block'>
+        <div className='hidden max-sm:block z-50'>
           <div className='flex justify-between p-4 items-center text-[#012555]'>
           <TbLogout2 className='text-2xl hover:text-[#01255598] cursor-pointer transition-all'/>
             <Link href={'/dashboard'}><Image src={logo} alt='img' width={100} height={60}/></Link>
@@ -48,7 +48,7 @@ const Sidebar = (props) => {
           </div>
           </div>
         
-          <div className='flex items-center justify-between gap-2 p-4 px-10 w-full bg-white sm:fixed sticky top-0'>
+          <div className='flex items-center justify-between gap-2 p-4 w-full bg-white sm:fixed sticky top-0 z-20'>
             <div className='flex items-center gap-2 '>
               <button
                   onClick={toggleSidebar}
@@ -209,7 +209,7 @@ const Sidebar = (props) => {
                 />
             )}
 
-            <div className={`p-10 sm:ml-64 pt-28 max-sm:pt-10 bg-[#FAFBFC] min-h-screen `}>
+            <div className={`p-10 sm:ml-64 max-sm:p-4 pt-28 max-sm:pt-8 bg-[#FAFBFC] min-h-screen `}>
                 {props.children}
             </div>
         </>

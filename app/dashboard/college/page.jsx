@@ -15,7 +15,8 @@ const page = () => {
       acceptanceRate : "44%",
       collegeType:"Private",
       Speciality:"HBCU",
-      graduationYear:"2002"
+      graduationYear:"2002",
+      id: 5342
     },
     {
       image: companyLogo,
@@ -25,7 +26,8 @@ const page = () => {
       description : "FSU, designated a preeminent university in the state of Florida, is one of the most respected research and learning institutions in the country.",
       tuitionCost : "1000",
       acceptanceRate : "44%",
-      collegeType:"Private"
+      collegeType:"Private",
+      id: 3648
     },
     {
       image: companyLogo,
@@ -36,7 +38,8 @@ const page = () => {
       tuitionCost : "6540",
       acceptanceRate : "44%",
       studentBodySize:"Medium",
-      collegeType:"Public"
+      collegeType:"Public",
+      id: 9802
     },
   ]
   const [showMore, setShowMore] = useState(false);
@@ -113,7 +116,7 @@ const page = () => {
     
     <div className='grid grid-cols-[30%_auto] gap-6 max-xl:grid-cols-1 '>
       {/* filter  */}
-      <div className='bg-white p-4 w-full'>
+      <div className='bg-white p-4 w-full rounded-xl'>
         <h1 className='text-3xl font-semibold'>Filters</h1>
         <form className='flex flex-col max-xl:flex-row max-xl:flex-wrap max-xl:gap-10'> 
           <div>
@@ -317,6 +320,8 @@ const page = () => {
                 location={item.location}
                 tuitionCost={item.tuitionCost}
                 acceptanceRate={item.acceptanceRate}
+                index={index}
+                id={item.id}
               />
             ))
           ) : (

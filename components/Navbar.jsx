@@ -37,7 +37,7 @@ const Navbar = () => {
     return (
         <>
             {/* dekstop navigation */}
-            <nav className='p-4 flex items-center justify-evenly w-full  mx-auto px-10 max-sm:px-4 sticky top-0 bg-white shadow-sm'>
+            <nav className='p-4 flex items-center justify-between max-w-screen-2xl mx-auto px-10 max-md:px-4 w-full max-sm:sticky max-sm:top-0 bg-white shadow-sm'>
                 <div className='flex items-center gap-6 '>
                     <button className='hidden max-lg:block' onClick={toggleMobileNav}>
                         <HiOutlineMenu className='text-3xl'/>
