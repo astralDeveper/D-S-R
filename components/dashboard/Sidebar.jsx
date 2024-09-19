@@ -38,6 +38,12 @@ const Sidebar = (props) => {
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
 
+
+    pathname.includes('dashboard/player-profile') ? console.log(true) : console.log(false);
+    
+    
+
+
     return (
         <>
         <div className='hidden max-sm:block z-50'>
@@ -61,7 +67,7 @@ const Sidebar = (props) => {
                   <IoMdMenu className='text-5xl p-2 max-sm:text-2xl max-sm:p-0'/>
               </button>
              
-              <h2 className='text-xl text-[#012555] max-sm:font-normal font-semibold max-md:text-sm max-sm:text-xs sm:ml-64'>{pathname === "/dashboard" ? "Dashboard" : pathname === "/dashboard/player-profile" ? "Player Profile" : pathname === "/dashboard/college" ? "College Fit Finder" :  pathname === "/dashboard/athletic-scholorships" || pathname === `/dashboard/athletic-scholorships/${params.sport}` || pathname === `/dashboard/athletic-scholorships/${params.sport}/${params.state}` || pathname === `/dashboard/athletic-scholorships/${params.sport}/${params.state}/${params.collage}` ? "Scholorship by State" : pathname === "/dashboard/favorites" ? "Favorites" : pathname === "/dashboard/coaches" ? "Coaches Contact" : pathname === "/dashboard/recruiting" ? "Recruiting Plan" : pathname === "/dashboard/tools" ? "Tools & Resources" : pathname === "/dashboard/tutorials" ? "Tutorials" : pathname === "/dashboard/help" ? "Help" : "" }</h2>
+              <h2 className='text-xl text-[#012555] max-sm:font-normal font-semibold max-md:text-sm max-sm:text-xs sm:ml-64'>{pathname === "/dashboard" ? "Dashboard" : pathname.includes('dashboard/player-profile') ? "Player Profile" : pathname === "/dashboard/college" ? "College Fit Finder" :  pathname === "/dashboard/athletic-scholorships" || pathname === `/dashboard/athletic-scholorships/${params.sport}` || pathname === `/dashboard/athletic-scholorships/${params.sport}/${params.state}` || pathname === `/dashboard/athletic-scholorships/${params.sport}/${params.state}/${params.collage}` ? "Scholorship by State" : pathname === "/dashboard/favorites" ? "Favorites" : pathname === "/dashboard/coaches" ? "Coaches Contact" : pathname === "/dashboard/recruiting" ? "Recruiting Plan" : pathname === "/dashboard/tools" ? "Tools & Resources" : pathname === "/dashboard/tutorials" ? "Tutorials" : pathname === "/dashboard/help" ? "Help" : "" }</h2>
             </div>
             <div className='flex items-center gap-2'>
              <FaRegBell className='text-4xl text-[#FFA412] bg-[#FFFAF1] rounded-xl p-2 transition-all cursor-pointer hover:bg-[#f0ebe2] max-sm:hidden'/>
@@ -102,10 +108,10 @@ const Sidebar = (props) => {
                             <Link
                                 onClick={toggleClose}
                                 href="/dashboard/player-profile"
-                                className={`flex items-center p-2 text-white rounded-lg ${pathname === "/dashboard/player-profile" ? "bg-gray-100 text-[#012555] font-semibold hover:bg-gray-200" : "hover:bg-gray-700"} dark:text-white  transition-all  group`}
+                                className={`flex items-center p-2 text-white rounded-lg ${pathname.includes('dashboard/player-profile') ? "bg-gray-100 text-[#012555] font-semibold hover:bg-gray-200" : "hover:bg-gray-700"} dark:text-white  transition-all  group`}
                             >
-                                <Image className={pathname === "/dashboard/player-profile" ? "" : "invert"} src={sideIcon} width={25} height={25} alt='Dashboard Icon'/>
-                                <span className={`ms-3 ${pathname === "/dashboard/player-profile" ? "text-[#012555]" : "text-white"}`}>Player Profile</span>
+                                <Image className={pathname.includes('dashboard/player-profile') ? "" : "invert"} src={sideIcon} width={25} height={25} alt='Dashboard Icon'/>
+                                <span className={`ms-3 ${pathname.includes('dashboard/player-profile') ? "text-[#012555]" : "text-white"}`}>Player Profile</span>
                             </Link>
                         </li>
                         <li>
@@ -209,7 +215,7 @@ const Sidebar = (props) => {
                 />
             )}
 
-            <div className={`p-10 sm:ml-64 max-sm:p-4 pt-28 max-sm:pt-8 bg-[#FAFBFC] min-h-screen `}>
+            <div className={` sm:ml-64 ${pathname.includes('dashboard/player-profile') ? "p-0 pt-[82px] max-sm:p-0" : "p-10 max-sm:p-4 pt-28 max-sm:pt-8"}  bg-[#FAFBFC] min-h-screen `}>
                 {props.children}
             </div>
         </>
