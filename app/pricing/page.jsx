@@ -62,7 +62,7 @@ const page = () => {
             </div>
 
           <div className='flex justify-center mt-6'>
-            <Link href="/signup" className='bg-[#012555] hover:bg-[#012555ad] transition-all text-white p-2 px-6 text-xl font-medium rounded-lg max-xl:text-lg max-sm:text-sm max-sm:font-medium'>Subscribe</Link>
+            <Link href="/signup?subscription=monthly" className='bg-[#012555] hover:bg-[#012555ad] transition-all text-white p-2 px-6 text-xl font-medium rounded-lg max-xl:text-lg max-sm:text-sm max-sm:font-medium'>Subscribe</Link>
           </div>
 
           </div>
@@ -117,7 +117,7 @@ const page = () => {
             </div>
 
           <div className='flex justify-center mt-6'>
-            <Link href="/signup" className='bg-white hover:bg-[#ffffffad] transition-all text-[#012555] p-2 px-6 text-xl font-medium rounded-lg max-xl:text-lg max-sm:text-sm max-sm:font-medium'>Subscribe</Link>
+            <Link href="/signup?subscription=annually" className='bg-white hover:bg-[#ffffffad] transition-all text-[#012555] p-2 px-6 text-xl font-medium rounded-lg max-xl:text-lg max-sm:text-sm max-sm:font-medium'>Subscribe</Link>
           </div>
 
           </div>

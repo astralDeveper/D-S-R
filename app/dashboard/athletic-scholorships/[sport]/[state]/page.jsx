@@ -113,6 +113,11 @@ const Page = () => {
     setCurrentPage(1);
   };
 
+
+  const areFiltersApplied = () => {
+    return searchTerm || selectedCity !== 'all' || selectedDivision !== 'all' || selectedConference !== 'all';
+  };
+
   return (
     <>
       <div>
@@ -168,10 +173,10 @@ const Page = () => {
             <option value="Big 12">Big 12</option> */}
           </select>
           <button
-            className='border-l border-[#DCDEE6] ml-2 px-4 text-[#DCDEE6] w-[500px]'
+            className={`border-l border-[#DCDEE6] ml-2 px-4 transition-all w-[600px] ${areFiltersApplied() ? "text-black" : "text-[#DCDEE6]"}`}
             onClick={clearFilters}
           >
-            <span className='flex items-center gap-2'>Clear All <IoClose className='border text-[#1F64AD] border-[#1F64AD] bg-[#D4E5F7] rounded-full' /></span>
+            <span className='flex items-center gap-2'>Clear All <IoClose className={`border text-[#1F64AD] transition-all border-[#1F64AD]  rounded-full ${areFiltersApplied() ? "text-xl " : "bg-[#D4E5F7]"}`} /></span>
           </button>
         </div>
         <div className='overflow-x-auto'>

@@ -5,6 +5,7 @@ import profileUser from '@/assets/dashboard/profile-user.svg'
 import ballImage from '@/assets/dashboard/ball-img.png'
 import HomeCard2 from '@/components/dashboard/HomeCard2'
 import HomeCard3 from '@/components/dashboard/HomeCard3'
+import Link from 'next/link'
 
 const page = () => {
 
@@ -147,7 +148,7 @@ const page = () => {
       <div className='mt-6'>
         <div className='flex items-center justify-between'>
           <h2 className='text-lg font-semibold'>Tutorials</h2>
-          <button className='p-2 px-8 text-lg rounded-xl bg-[#012555] hover:bg-[#012555b6] text-white transition-all'>View All</button>
+          <Link href='/dashboard/tutorials' className='p-2 px-8 text-lg rounded-xl bg-[#012555] hover:bg-[#012555b6] text-white transition-all'>View All</Link>
         </div>
 
         <div className='grid grid-cols-4 gap-4 mt-6 max-xl:grid-cols-2 max-md:grid-cols-1'>

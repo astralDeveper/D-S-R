@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useParams, usePathname } from 'next/navigation';
 import sideIcon from '@/assets/dashboard/sidebar/dashboard-btn-icon.svg';
+import logoD from '@/assets/navbar/logoD.png'
 import logo from '@/assets/navbar/logo.png'
 import { HiMenuAlt2 } from 'react-icons/hi';
 import { IoMdMenu } from 'react-icons/io';
@@ -91,7 +92,7 @@ const Sidebar = (props) => {
                                 href="/dashboard"
                                 className={`flex items-center p-2 transition-all group`}
                             >
-                                <span className="ms-3 mb-6"><Image src={logo} alt='img' width={150} height={50}/></span>
+                                <span className="ms-3 mb-6"><Image src={logoD} alt='img' width={150} height={50}/></span>
                             </Link>
                         </li>
                         <li>

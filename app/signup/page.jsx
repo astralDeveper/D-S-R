@@ -1,6 +1,14 @@
+'use client'
+import { useSearchParams } from 'next/navigation'
 import React from 'react'
 
 const page = () => {
+  const searchParams = useSearchParams()
+ 
+  const subscription = searchParams.get('subscription')
+
+  console.log(subscription);
+  
   return (
     <>
       <div className='max-w-screen-2xl px-10 max-md:px-4 mx-auto mt-20 max-md:mt-[10%] mb-10 max-sm:mb-[10%]'>
@@ -44,10 +52,20 @@ const page = () => {
           </div>
 
 
+          {/* <div className='bg-[#012555] text-white col-span-2 p-6 max-sm:p-4'>
+              <h2 className='text-3xl font-semibold text-center max-sm:text-2xl'>Monthly Access billed at:</h2>
+              <p className='text-2xl text-center mt-4 max-sm:text-xl'><span className='text-4xl font-bold max-sm:text-3xl text-[#E1E1E1]'>$15 /</span> monthly subscription</p>
+          </div> */}
+
+          {subscription === "monthly" ? (
           <div className='bg-[#012555] text-white col-span-2 p-6 max-sm:p-4'>
               <h2 className='text-3xl font-semibold text-center max-sm:text-2xl'>Monthly Access billed at:</h2>
               <p className='text-2xl text-center mt-4 max-sm:text-xl'><span className='text-4xl font-bold max-sm:text-3xl text-[#E1E1E1]'>$15 /</span> monthly subscription</p>
-          </div>
+          </div> ): (
+          <div className='bg-[#012555] text-white col-span-2 p-6 max-sm:p-4'>
+              <h2 className='text-3xl font-semibold text-center max-sm:text-2xl'>Annual Access billed at:</h2>
+              <p className='text-2xl text-center mt-4 max-sm:text-xl'><span className='text-4xl font-bold max-sm:text-3xl text-[#E1E1E1]'>$150 /</span> annual subscription</p>
+          </div>)}
 
           <div className='flex flex-col w-full gap-2 max-md:col-span-2'>
             <label className='font-semibold max-sm:text-sm' htmlFor="card-name">Credit Card Name:*</label>

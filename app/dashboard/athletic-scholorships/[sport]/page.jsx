@@ -20,11 +20,11 @@ const page = () => {
         },
         {
             name:"Arizona",
-            link:"#"
+            link:"arizona"
         },
         {
             name:" Arkansas",
-            link:"#"
+            link:"arkansas"
         },
         {
             name:"California",

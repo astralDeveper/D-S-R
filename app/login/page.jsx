@@ -33,7 +33,7 @@ const page = () => {
           <button className='flex items-center gap-2 justify-center border-2 border-[#DADADA] w-full hover:bg-[#DADADA] transition-all p-2 px-6 text-xl font-medium rounded-lg max-xl:text-lg max-sm:text-sm max-sm:font-medium'> <FcGoogle className='text-3xl max-sm:text-xl'/> Sign in with Google</button>
         </form>
 
-        <div className='text-center mt-10 font-medium md:text-lg '>Don’t have an account yet? <Link href={'/signup'} className='text-[#012555] font-semibold hover:text-[#012555ad]'>Sign up</Link></div>
+        <div className='text-center mt-10 font-medium md:text-lg '>Don’t have an account yet? <Link href={'/pricing'} className='text-[#012555] font-semibold hover:text-[#012555ad]'>Sign up</Link></div>
       </div>
     </>
   )
